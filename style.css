@@ -1,0 +1,886 @@
+:root {
+    --main_color: #0B2E4B;
+    --secondary_color: #00C9E0;
+    --text_color: #FFFFFF;
+
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Merriweather", serif;
+    background-color: var(--main_color);
+    margin: 0px;
+    color: var(--text_color);
+
+}
+
+main,
+.container,
+footer {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media(min-width:768px) {
+
+    main,
+    .container,
+    footer {
+        width: 750px;
+    }
+
+}
+
+@media(min-width:992px) {
+
+    main,
+    .container,
+    footer {
+        width: 970px;
+    }
+}
+
+/* ---------------navigation bar---------------  */
+
+nav {
+    padding: 1rem 0;
+    position: relative;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+}
+
+nav .menu_part {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav .search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    gap: 0.5rem;
+}
+
+nav .search_input {
+    display: none;
+    width: 100%;
+    padding: 1.3rem 3.5rem;
+    border-radius: 3rem;
+    outline: none;
+    border: none;
+
+}
+
+nav .search_input.block {
+    display: block;
+    animation: search 1s ease-in-out alternate forwards;
+}
+
+@keyframes search {
+    0% {
+        opacity: 0;
+        transform: scale(0.5)
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+nav .search img {
+    cursor: pointer;
+}
+
+
+
+nav .menu_part .menu_button a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--secondary_color);
+    padding: 0.8rem 2.7rem;
+    border-radius: 3rem;
+}
+
+nav .menu_part .links {
+    transition: 2s ease-in;
+    display: none;
+    position: absolute;
+    padding: 3rem;
+    width: 100%;
+    left: 0;
+    top: 80%;
+    background-color: var(--main_color);
+}
+
+nav .menu_part .block {
+    display: block;
+    position: fixed;
+    top: 10%;
+    z-index: 100;
+}
+
+nav .menu_part .links ul {
+    list-style: none;
+    font-size: 1.5rem;
+}
+nav .menu_part .links ul li#close {
+    display: flex;
+    justify-content: flex-end;
+}
+nav .menu_part .links ul li#close:hover {
+   color: var(--secondary_color);
+}
+
+nav .menu_part .links ul li {
+    padding: 1rem 1rem 1rem 0;
+    transition: 2s ease;
+}
+
+nav .menu_part .links ul li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    padding: 1rem;
+}
+
+nav .menu_part .links ul li:hover {
+    padding-left: 2rem;
+    cursor: pointer;
+}
+nav .menu_part .links ul li:hover a{
+    color: var(--secondary_color);
+
+}
+nav .menu_part .menu_button a:hover {
+    box-shadow: 5px 15px 40px 0 #00cae041;
+}
+
+/* ---------------header section---------------  */
+
+header {
+    background-image: url('images/header.png');
+    background-size: cover;
+    height: 100vh;
+
+}
+
+.header {
+    margin: 2rem auto;
+
+}
+
+header .header_content {
+    text-align: center;
+
+}
+
+header .header_content h1 {
+    letter-spacing: 0.8;
+    font-size: 4rem;
+    padding-bottom: 1rem;
+}
+
+
+header .header_content h2 {
+    padding: 1rem 0;
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+header .header_content p {
+    margin: 3rem auto 0rem;
+    width: 60%;
+    font-size: 0.9rem;
+    font-weight: 100;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+header .social_media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+
+
+}
+
+header .social_media span {
+    rotate: 270deg;
+}
+
+header .social_media span::before {
+    content: '';
+    width: 50px;
+    border: 1px solid var(--secondary_color);
+    border-style: solid none none;
+    position: absolute;
+    right: 60px;
+    top: 10px;
+}
+
+
+body {
+    background-image: url('images/BG\ LIGHTS.png');
+    background-position: 20% 30%;
+}
+
+/* ---------------pick your trip section---------------  */
+.your_trip {
+    margin-bottom: 10rem;
+    position: relative;
+}
+
+.your_trip .heading {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 5rem 0;
+}
+
+.your_trip .heading h2 {
+    padding-left: 2rem;
+    font-size: 3.25rem;
+}
+
+.your_trip .heading p {
+    font-size: 1rem;
+    line-height: 2;
+    position: relative;
+}
+
+.your_trip .heading .describtion {
+    position: relative;
+}
+
+.your_trip .heading span {
+    color: var(--secondary_color);
+    cursor: pointer;
+    position: absolute;
+    left: -27px;
+    bottom: 20px;
+}
+
+.your_trip .trip_types ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+.your_trip .trip_types ul li {
+    position: relative;
+    cursor: pointer;
+}
+
+.your_trip .trip_types ul::after {
+    content: "";
+    border: 2px solid #00c9e05c;
+    position: absolute;
+    width: 93%;
+    bottom: 0px;
+}
+
+.your_trip .trip_types li {
+    padding-right: 0.5rem;
+}
+
+.your_trip .trip_types li.active {
+    color: var(--secondary_color);
+}
+
+.your_trip .trip_types li.active::before {
+    content: "";
+    border: 2px solid var(--secondary_color);
+    position: absolute;
+    width: 183%;
+    bottom: -31px;
+    left: -41%;
+}
+
+.your_trip .trip_details {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 6rem;
+}
+
+.your_trip .trip_details .image_details {
+    position: relative;
+    width: 50%;
+}
+
+.your_trip .trip_details .image_details .img_number {
+    position: absolute;
+    top: 40%;
+    left: -5rem;
+    color: var(--secondary_color);
+    font-size: 1.5rem;
+}
+
+.your_trip .trip_details .image_details .img_number::before {
+    content: " ";
+    display: block;
+    border: 2px solid var(--secondary_color);
+    height: 1rem;
+    width: 11rem;
+    border-style: solid none none solid;
+}
+
+.your_trip .trip_details .image_details figure::before {
+    content: "";
+    background-image: url('images/Dots2.png');
+    left: -12%;
+    bottom: -10%;
+    height: 170px;
+    width: 170px;
+    z-index: -1;
+    position: absolute;
+}
+
+.your_trip .trip_details .image_details h4 {
+    position: absolute;
+    top: 50%;
+    left: -5rem;
+    font-size: 1.5rem;
+    width: 50%;
+    font-weight: 200;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.your_trip .trip_details .image_details figure {
+    position: relative;
+    width: 100%;
+    height: 33.8rem;
+}
+
+.your_trip .trip_details .image_details #left_arrow {
+    position: absolute;
+    padding: 1.7rem 2rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    background: rgba(0, 0, 0, 0.582);
+    bottom: 0rem;
+    right: 26%;
+    cursor: pointer;
+
+}
+
+.your_trip .trip_details .image_details #right_arrow {
+    position: absolute;
+    bottom: 0rem;
+    right: 10%;
+    background: rgba(0, 0, 0, 0.582);
+    padding: 1.7rem 2rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    cursor: pointer;
+}
+
+.your_trip .trip_details figure img {
+    width: 90%;
+    border-radius: 0.5rem;
+    display: none;
+    height: 100%;
+
+}
+
+.your_trip .trip_details figure img.active {
+    display: block;
+
+}
+
+.your_trip .trip_details .trip_content {
+    position: relative;
+    width: 40%;
+}
+
+.your_trip .trip_details .trip_content h3 {
+    font-size: 3rem;
+
+}
+
+.your_trip .trip_details .trip_content p {
+    padding: 2rem 0;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 3rem;
+}
+
+.your_trip .trip_details .trip_content button {
+    text-decoration: none;
+    color: var(--text_color);
+    background-color: var(--secondary_color);
+    padding: 1.3rem 3.4rem;
+    border-radius: 48px;
+    font-size: 0.8rem;
+    position: relative;
+    border: none;
+
+}
+
+.your_trip .trip_details .trip_content button:hover {
+    box-shadow: 5px 15px 40px 0 #00cae041;
+}
+
+.your_trip .trip_details .trip_content a::after {
+    content: "";
+    border: 2px solid var(--text_color);
+    width: 2rem;
+    border-style: solid none none none;
+    position: absolute;
+    right: -1rem;
+    bottom: 1.7rem;
+
+}
+
+.your_trip .share {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+}
+
+.your_trip .share h4 {
+    padding-bottom: 1.4rem;
+
+}
+
+.your_trip .share .social_media img {
+    padding-right: 1rem;
+
+}
+
+.your_trip .share .social_media::after {
+    content: " ";
+    border: 1px solid var(--secondary_color);
+    border-style: none solid solid none;
+    display: block;
+    padding-top: 1rem;
+
+}
+
+/* ---------------about us section---------------  */
+
+.about_us {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 10rem;
+}
+
+.about_us .heading {
+    width: 30%;
+}
+
+.about_us .heading h2 {
+    font-size: 3.25rem;
+    margin-top: 3rem;
+}
+
+.about_us .heading p {
+    padding: 2rem 0;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 3rem;
+}
+
+.about_us .heading a {
+    text-decoration: none;
+    color: var(--text_color);
+    background-color: var(--secondary_color);
+    padding: 1.3rem 3.5rem;
+    border-radius: 48px;
+    font-size: 0.8rem;
+    position: relative;
+    text-align: center;
+}
+
+.about_us .heading a:hover {
+    box-shadow: 5px 15px 40px 0 #00cae041;
+}
+
+.about_us .heading a::after {
+    content: "";
+    border: 2px solid var(--text_color);
+    width: 2rem;
+    border-style: solid none none none;
+    position: absolute;
+    right: -1rem;
+    bottom: 1.7rem;
+}
+
+.about_us .about_us_images {
+    width: 60%;
+    position: relative;
+}
+
+.about_us .about_us_images::after {
+    content: " ";
+    display: block;
+    background-image: url('images/Dots3.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 6%;
+    bottom: 25%;
+    width: 4.5rem;
+    height: 51%;
+
+}
+
+.about_us .about_us_images img {
+    width: 40%;
+}
+
+/* ---------------people thoughts section---------------  */
+.people_thoughts {
+    margin-bottom: 10rem;
+
+}
+
+.people_thoughts .heading {
+    text-align: center;
+}
+
+.people_thoughts .heading h2 {
+    font-size: 3.25rem;
+    padding-bottom: 1.5rem;
+}
+
+.people_thoughts .heading p {
+    font-size: 1rem;
+    padding-bottom: 3rem;
+}
+
+.people_thoughts .people_thoughts_cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.people_thoughts .people_thoughts_cards .card {
+    background-color: #02223B;
+    border-radius: 0.5rem;
+    padding: 4.5rem;
+}
+
+.people_thoughts .people_thoughts_cards .card p {
+    padding-bottom: 2rem;
+    line-height: 2;
+}
+
+.people_thoughts .people_thoughts_cards .card .personal_info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.people_thoughts .people_thoughts_cards .card .personal_info h3 {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.people_thoughts .people_thoughts_cards .card .personal_info h4 {
+    font-size: 0.7rem;
+}
+
+
+/* ---------------see you soon section---------------  */
+
+.see_you {
+    margin-bottom: 22rem;
+    text-align: center;
+    position: relative;
+}
+
+.see_you h2 {
+    font-size: 3.25rem;
+    padding-bottom: 1.5rem;
+
+}
+
+.see_you h5 {
+    font-size: 1.5rem;
+}
+
+.see_you span {
+    color: var(--secondary_color);
+    background-color: var(--secondary_color);
+    height: 4rem;
+    border: 2px solid var(--secondary_color);
+    position: absolute;
+    bottom: -15rem
+}
+
+/* ---------------footer---------------  */
+
+footer .footer_links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+footer .footer_links .footer_col h4 {
+    font-size: 1.1rem;
+    padding-bottom: 2rem;
+
+}
+
+footer .footer_links .footer_col ul {
+    list-style: none;
+}
+
+footer .footer_links .footer_col ul li {
+    padding-bottom: 1rem;
+}
+
+footer .footer_links .footer_col ul li a {
+    text-decoration: none;
+    color: var(--text_color);
+    font-size: 0.8rem;
+}
+
+
+footer .privacy {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width:1070px) {
+    .your_trip .trip_details .image_details h4 {
+        left: -2rem;
+        top: 55%;
+        font-size: 1rem;
+    }
+
+    .your_trip .trip_details .image_details .img_number {
+        left: -2rem;
+    }
+}
+
+@media (max-width:992px) {
+    :root {
+        font-size: 12px;
+    }
+
+    nav .menu_part .search_input {
+        width: 45%;
+        left: 20%;
+    }
+
+    .your_trip .trip_types li.active::before {
+        width: 196%;
+        bottom: -24px;
+        left: -4rem;
+    }
+
+    .your_trip .trip_details .trip_content {
+        width: 90%;
+    }
+
+    .your_trip .trip_details .image_details figure::before {
+        left: 53%;
+        bottom: 67%;
+    }
+
+    .your_trip .trip_details .image_details #left_arrow {
+        right: 26%;
+    }
+
+    .about_us .about_us_images {
+        align-self: center;
+    }
+}
+
+@media (max-width:768px) {
+
+    header .header_content h1 {
+        font-size: 4rem;
+
+    }
+
+    .your_trip .heading p {
+        font-size: 1.1rem;
+    }
+
+    .your_trip .trip_details .image_details figure::before {
+        left: 44%;
+        bottom: 59%;
+    }
+
+    .your_trip .trip_types li.active::before {
+        width: 182%;
+        bottom: -24px;
+        left: -41%;
+    }
+
+    .about_us .heading {
+        width: 40%;
+    }
+
+    .about_us .about_us_images {
+        width: 40%;
+    }
+
+    .about_us .heading a {
+        display: block;
+    }
+
+    .people_thoughts .people_thoughts_cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 1rem;
+    }
+
+    footer .footer_links .footer_col .social_media img {
+        width: 20%;
+    }
+}
+
+@media (max-width: 667px) {
+    .your_trip .trip_details .image_details h4 {
+        font-size: 1rem;
+    }
+
+    .your_trip .trip_details .image_details figure::before {
+        display: none;
+    }
+
+    .your_trip .trip_details .image_details #left_arrow {
+        right: 28%;
+    }
+
+    .about_us {
+        flex-direction: column-reverse;
+    }
+
+    .about_us .about_us_images {
+        width: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    main {
+        padding: 0;
+    }
+
+    nav .menu_part .search_input {
+        width: 40%;
+        left: 22%;
+    }
+
+    .header {
+        padding-top: 10rem;
+    }
+
+    .your_trip .trip_types ul::after {
+        width: 95%;
+    }
+
+    .your_trip .trip_types li.active::before {
+        width: 130%;
+        bottom: -24px;
+        left: -36%;
+    }
+
+    .your_trip .trip_details .image_details {
+        width: 70%;
+    }
+
+    .your_trip .trip_details .image_details figure::before {
+        left: 31%;
+        bottom: 47%;
+        display: none;
+    }
+
+    .your_trip .trip_details .image_details figure {
+        position: relative;
+
+        margin: auto;
+    }
+
+    .your_trip .trip_details figure img {
+        width: 100%;
+    }
+
+    .your_trip .trip_details .image_details h4 {
+        left: -2rem;
+        top: 60%;
+        font-size: 1rem;
+    }
+
+    .your_trip .trip_details .image_details .img_number {
+        left: -2rem;
+    }
+
+    .your_trip .trip_details .image_details #left_arrow {
+        right: 17%;
+        padding: 1.4rem
+    }
+
+    .your_trip .trip_details .image_details #right_arrow {
+        right: 0%;
+        padding: 1.4rem;
+    }
+
+
+    .about_us .heading h2 {
+        font-size: 3rem;
+    }
+
+
+    .about_us .about_us_images {
+        width: 70%;
+    }
+
+    .about_us .heading {
+        width: 80%;
+        margin: auto;
+    }
+
+    .about_us .heading a {
+        display: block;
+        padding: 1.3rem 3.4rem;
+        font-size: 0.6rem;
+    }
+
+    .people_thoughts .people_thoughts_cards {
+        margin: 0 3rem;
+    }
+
+
+}
